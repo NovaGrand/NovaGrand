@@ -1,0 +1,22 @@
+.novaGrand.flex{
+  display: flex;
+  &.jc{ justify-content: center; }
+  &.je{ justify-content: flex-end; }
+  &.jsb{ justify-content: space-between; }
+  &.jsa{ justify-content: space-around }
+  &.jse{ justify-content: space-evenly }
+  &.column{ flex-direction: column; &.reverse{ flex-direction: column-reverse }}
+  &.reverse:not(.column){ flex-direction: row-reverse; }
+  &.as{ align-items: stretch;}
+  &.ac{ align-items: center;}
+  &.ae{ align-items: end;}
+  &.wrap{flex-wrap: wrap;}
+}
+.novaGrand{
+  &.jc:not(.flex){
+    text-align: center;
+  }
+  &.je:not(.flex){
+    text-align: right;
+  }
+}

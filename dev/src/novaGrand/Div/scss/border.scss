@@ -1,0 +1,14 @@
+.novaGrand{
+  --bt:0;--br:0;--bb:0;--bl:0;--ba:0;
+  --bv:0;
+  &.bt,&.ba{ border-top:    calc((var(--bt) + var(--ba)) * 1px) var(--bs, solid) var(--color, rgba(0,0,0,.9)) }
+  &.br,&.ba{ border-right:  calc((var(--br) + var(--ba)) * 1px) var(--bs, solid) var(--color, rgba(0,0,0,.9)) }
+  &.bb,&.ba{ border-bottom: calc((var(--bb) + var(--ba)) * 1px) var(--bs, solid) var(--color, rgba(0,0,0,.9)) }
+  &.bl,&.ba{ border-left:   calc((var(--bl) + var(--ba)) * 1px) var(--bs, solid) var(--color, rgba(0,0,0,.9)) }
+  &.dashed{ --bs: dashed }
+  &.dotted{ --bs: dotted }
+  &.round{ border-radius: 5000px }
+  &.bv{
+    border-radius: calc(var(--bv) * 1px);
+  }
+}

@@ -1,0 +1,40 @@
+#root{
+  height: 100vh;
+  header.bar{
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    padding: 0 25px;
+  }
+  aside.bar{
+    position: absolute;top: 50px;left: 0;
+    width: 250px;
+    height: calc(100vh - 50px);
+    border-right: 1px solid white;
+    ul{
+      padding: 30px 0;
+      margin: 0;
+      li{
+        list-style: none;
+        a{
+          font-size: 20px;
+          color: white;
+          height: 40px;line-height: 38px;width: 100%;
+          padding: 0 10px 0 25px;
+          &:hover{
+            background-color: rgba(255,255,255,.1);
+          }
+        }
+      }
+    }
+  }
+  main.view{
+    position: absolute;top: 50px;left: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+    width: calc(100vw - 250px);
+  }
+}

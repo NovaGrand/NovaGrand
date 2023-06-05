@@ -1,0 +1,11 @@
+.novaGrand{
+  font-size: 16px;
+  letter-spacing: 1px;
+  &.fs{ font-size: calc(var(--fs, 15) * 1px); }
+  &.ls{ letter-spacing: calc(var(--ls, 1) * 1px); }
+  &.bold{ font-weight: bold; }
+  &.indent{ text-indent: 3em; }
+  &.italic{ font-style: italic; }
+  &.noSelect{ user-select: none; }
+  &.ellipsis{ overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
+}

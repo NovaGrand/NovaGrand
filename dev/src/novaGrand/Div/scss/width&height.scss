@@ -1,0 +1,12 @@
+.novaGrand{
+  --wd:0;--ht:0;--col:0;--row:0;
+  &.wd, &.col{
+    width: calc(var(--wd) * 1px + var(--col) * 1%);
+  }
+  &.ht, &.row{
+    height: calc(var(--ht) * 1px + var(--row) * 1%);
+  }
+  &.fill{
+    width: 100%;height: 100%;
+  }
+}

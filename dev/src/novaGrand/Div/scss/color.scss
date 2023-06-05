@@ -1,0 +1,8 @@
+.novaGrand{
+  &.color{
+    color: var(--color);
+  }
+  &.bg{
+    background: var(--bg,var(--color));
+  }
+}

@@ -1,0 +1,33 @@
+.novaGrand{
+  box-sizing: border-box;
+  display: inline-block;
+  &.block{ display: block; }
+  &.noScroll{ overflow: hidden }
+  &.relative{ position: relative }
+  &.absolute{ position: absolute }
+  &.opacity{
+    opacity: var(--opacity, 1);
+  }
+  // 调试属性
+  &.foo{ background-color: rgba(255,0,0,.2); &.bar{ background-color: rgba(0,255,0,.3) } &.baz{ background-color: rgba(0,200,255,.2) }}
+  &.bar{ background-color: rgba(100,255,0,.3); &.baz{ background-color: rgba(255,100,100,.2) }}
+  &.baz{ background-color: rgba(150,150,255,.2) }
+  &.pointer{
+    position: relative;
+    cursor: pointer;
+    &::after{
+      position: absolute;content: '';left: -.5px;top: -.5px;border-radius: inherit;
+      width: calc(100% + 1px);height: calc(100% + 1px);
+    }
+    &:active::after{
+      background-color: rgba(250,250,250,.04);
+    }
+  }
+}
+
+@import "text.scss";
+@import "flex.scss";
+@import "color.scss";
+@import "border.scss";
+@import "width&height.scss";
+@import "padding&margin.scss";

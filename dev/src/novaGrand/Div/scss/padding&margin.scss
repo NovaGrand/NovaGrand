@@ -1,0 +1,25 @@
+.novaGrand{
+  --pt:0;--pr:0;--pb:0;--pl:0;--px:0;--py:0;--pa:0;
+  --mt:0;--mr:0;--mb:0;--ml:0;--mx:0;--my:0;--ma:0;
+  &.pt,&.pr,&.pb,&.pl,&.px,&.py,&.pa{ padding:
+          calc( var(--pt) * 1px + var(--pa) * 1px + var(--py) * 1px )
+          calc( var(--pr) * 1px + var(--pa) * 1px + var(--px) * 1px )
+          calc( var(--pb) * 1px + var(--pa) * 1px + var(--py) * 1px )
+          calc( var(--pl) * 1px + var(--pa) * 1px + var(--px) * 1px );
+  }
+  &.mt,&.mr,&.mb,&.ml,&.mx,&.my,&.ma{ margin:
+          calc( var(--mt) * 1px + var(--ma) * 1px + var(--my) * 1px )
+          calc( var(--mr) * 1px + var(--ma) * 1px + var(--mx) * 1px )
+          calc( var(--mb) * 1px + var(--ma) * 1px + var(--my) * 1px )
+          calc( var(--ml) * 1px + var(--ma) * 1px + var(--mx) * 1px );
+  }
+  &.mx-auto{ display: block;margin-left: auto;margin-right: auto; }
+
+  --nr:0;--nl:0;--nx:0;--nd:0;--nu:0;--ny:0;--scale:1;--rotate:0;
+  &.nu,&.nr,&.nd,&.nl,&.nx,&.ny,&.rotate,&.scale{ transform:
+          translateX(calc((var(--nr) - var(--nl) + var(--nx)) * 1px))
+          translateY(calc((var(--nd) - var(--nu) + var(--ny)) * 1px))
+          rotate(calc(var(--rotate) * 1deg))
+          scale(var(--scale));
+  }
+}
